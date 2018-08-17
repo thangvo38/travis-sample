@@ -2,7 +2,7 @@ jobs:
  include:
   - stage: "Deploy"
     name: "Build and deploy"
-    script: "x=5"
+    script: x=5
   - stage: "Test"
     name: "Testing"
-    script: "echo $x"
+    script: echo abc
