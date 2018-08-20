@@ -1,9 +1,13 @@
+env:
+  - APPID=""
+  
 jobs:
  include:
   - stage: "Deploy"
     name: "Build and deploy"
-    script: export XA="234-bda"
-    after_script: echo $XA
+    before_script: echo $APPID
+    script: APPID="abc-123-def"
+    after_script: echo $APPID
   - stage: "Test"
     name: "Testing"
-    script: echo $XA
+    script: echo $APPID
