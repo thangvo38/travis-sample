@@ -1,13 +1,22 @@
-env:
-  - APPID=""
-  
-jobs:
- include:
-  - stage: "Deploy"
-    name: "Build and deploy"
-    before_script: echo $APPID
-    script: sh ./abc.sh
-  - stage: "Test"
-    name: "Testing"
-    script: value=$(<parseId.sh)
-    after_script: echo $value
+script: echo "Build"
+  #Build project
+
+deploy: echo "Deploy"
+  #Upload app to HockeyApp
+
+after_deploy: echo "After deploy"
+  #Store App ID
+
+after_script: echo "Test"
+  #Start testing
+
+# jobs:
+#  include:
+#   - stage: "Deploy"
+#     name: "Build and deploy"
+#     before_script: echo $APPID
+#     script: sh ./abc.sh
+#   - stage: "Test"
+#     name: "Testing"
+#     script: value=$(<parseId.sh)
+#     after_script: echo $value
