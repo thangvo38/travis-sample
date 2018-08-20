@@ -3,6 +3,7 @@ jobs:
   - stage: "Deploy"
     name: "Build and deploy"
     script: x=5
+    after_script: echo "$x"
   - stage: "Test"
     name: "Testing"
-    script: echo abc
+    script: echo "$x"
