@@ -14,9 +14,7 @@ jobs:
  include:
   - stage: "Deploy"
     name: "Build and deploy"
-    before_script: echo $APPID
-    script: sh ./abc.sh
+    script: echo ‘export var=x’ >> $BASH_ENV
   - stage: "Test"
     name: "Testing"
-    script: value=$(<parseId.sh)
-    after_script: echo $value
+    script: echo $var
