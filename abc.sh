@@ -1,2 +1,1 @@
-export XAA="abc-123"
-
+abcdef
