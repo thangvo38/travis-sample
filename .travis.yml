@@ -1,5 +1,6 @@
 env:
-  - APPID=""
+  global:
+    - APPID=""
   
 jobs:
  include:
