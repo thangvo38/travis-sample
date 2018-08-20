@@ -2,8 +2,8 @@ jobs:
  include:
   - stage: "Deploy"
     name: "Build and deploy"
-    script: x=5
-    after_script: echo "$x"
+    script: export XA="234-bda"
+    after_script: echo $XA
   - stage: "Test"
     name: "Testing"
-    script: echo "$x"
+    script: echo $XA
