@@ -1,12 +1,13 @@
+env:
+  - APPID=""
+  
 jobs:
-  env:
-      - APPID=""
  include:
   - stage: "Deploy"
     name: "Build and deploy"
     before_script: echo $APPID
-    script: APPID="abc-123-def"
-    after_script: chmod -x ./abc.sh
+    script: sh ./abc.sh
   - stage: "Test"
     name: "Testing"
-    script: echo $APPID
+    script: value=$(<parseId.sh)
+    after_script: echo $value
