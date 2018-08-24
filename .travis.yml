@@ -1,33 +1,8 @@
-# script: echo "Build"
-#   #Build project
-
-# deploy: echo "Deploy"
-#   #Upload app to HockeyApp
-
-# after_deploy: echo "After deploy"
-#   #Store App ID
-
-# after_script: echo "Test"
-#   #Start testing
-
-sudo: required
-
-language: ruby
-
-services:
-  - docker
-
-before_install:
-- docker pull carlad/sinatra
-- docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
-- docker ps -a
-- docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
-
-script:
-- bundle exec rake test
-  # - stage: "Deploy"
-  #   name: "Build and deploy"
-  #   script: echo ‘export var=x’ >> $BASH_ENV
-  # - stage: "Test"
-  #   name: "Testing"
-  #   script: echo $var
+jobs:
+  - stage: "Build App and Deploy"
+    script: echo "Uploading new version to github"
+  - stage: "Test"
+    language: node_js
+    node_js: "node"
+    name: "Test with Kobiton"
+    script: npm run android-app-test.js
