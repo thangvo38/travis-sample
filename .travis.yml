@@ -1,4 +1,5 @@
 jobs:
+ includes:
   - stage: "Build App and Deploy"
     script: echo "Uploading new version to github"
   - stage: "Test"
