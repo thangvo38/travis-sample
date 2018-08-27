@@ -3,7 +3,5 @@ jobs:
   - stage: "Build App and Deploy"
     script: echo a
   - stage: "Test"
-    language: node_js
-    node_js: "node"
     name: "Test with Kobiton"
     script: sh ./abc.sh
