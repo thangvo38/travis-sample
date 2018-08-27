@@ -1,9 +1,9 @@
 jobs:
- includes:
+ include:
   - stage: "Build App and Deploy"
-    script: echo "Uploading new version to github"
+    script: echo a
   - stage: "Test"
     language: node_js
     node_js: "node"
     name: "Test with Kobiton"
-    script: abc.sh
+    script: ./abc.sh
