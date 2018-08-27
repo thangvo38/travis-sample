@@ -4,6 +4,6 @@ jobs:
     script: echo "Uploading new version to github"
   - stage: "Test"
     language: node_js
-    node_js: "nodejs"
+    node_js: "node"
     name: "Test with Kobiton"
     script: abc.sh
