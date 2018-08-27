@@ -4,6 +4,6 @@ jobs:
     script: echo "Uploading new version to github"
   - stage: "Test"
     language: node_js
-    node_js: "node"
+    node_js: "nodejs"
     name: "Test with Kobiton"
-    script: npm run android-app-test.js
+    script: abc.sh

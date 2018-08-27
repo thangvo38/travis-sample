@@ -1,5 +1,2 @@
-echo 'aaa-bbb-ccc' > temp.sh
-touch parseId.sh
-cat parseId.sh >> temp.sh
-mv temp.sh parseId.sh
-echo $(<parseId.sh)
+x=$(node test.js | jq -r '.key1.key11')
+echo $x
