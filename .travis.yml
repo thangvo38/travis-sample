@@ -6,4 +6,4 @@ jobs:
     language: node_js
     node_js: "node"
     name: "Test with Kobiton"
-    script: ./abc.sh
+    script: chmod +x ./abc.sh
