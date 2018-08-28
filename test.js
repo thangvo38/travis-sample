@@ -1,13 +1,9 @@
-a()
+const a = process.env.RESIGNED_URL
+const v = process.env.VERSION
 
-function a() {
-    const json = {
-        'key1': {
-            'key11': 11,
-            'key12': 12
-        },
-        'key2': 2
-    }
+main()
 
-    console.log(JSON.stringify(json))
+function main() {
+    console.log('URL', a)
+    console.log('Version', v)
 }
