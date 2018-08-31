@@ -1,0 +1,6 @@
+jobs:
+  include:
+    - stage: Deploy
+    script: echo aaaa
+    - stage: Test with Kobiton
+    script: ehh.sh
