@@ -1,6 +1,6 @@
 jobs:
   include:
     - stage: Deploy
-    script: echo ehhh
+    script: echo "321312"
     - stage: Test
     script: ehh.sh
