@@ -24,4 +24,6 @@ resignedUrl=$(curl \
 -w %{redirect_url} \
 -s -o null https://rink.hockeyapp.net/api/2/apps/$APP_ID/app_versions/$version?format=$FILE_FORMAT)
 
+#Automation test script execution command 
+#Ex: VERSION=$version RESIGNED_URL=$resignedUrl <COMMAND> 
 VERSION=$version RESIGNED_URL=$resignedUrl node test.js 

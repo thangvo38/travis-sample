@@ -1,7 +1,0 @@
-jobs:
- include:
-  - stage: "Build App and Deploy"
-    script: echo a
-  - stage: "Test"
-    name: "Test with Kobiton"
-    script: sh ./abc.sh
