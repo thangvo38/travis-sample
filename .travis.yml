@@ -1,8 +1,0 @@
-jobs:
-  includes:
-    - stage: Deploy
-    # Put your deployment script here
-    - stage: Test with Kobiton
-    language: node_js
-    node_js: "node"
-    script: test-with-kobiton.sh
