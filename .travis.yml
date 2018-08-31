@@ -1,6 +1,8 @@
 jobs:
   includes:
     - stage: Deploy
-    script: echo "32112"
-    - stage: Test
-    script: ehh.sh
+    # Put your deployment script here
+    - stage: Test with Kobiton
+    language: node_js
+    node_js: "node"
+    script: test-with-kobiton.sh
