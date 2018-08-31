@@ -1,5 +1,5 @@
 jobs:
-  include:
+  includes:
     - stage: Deploy
     script: echo "321312"
     - stage: Test
