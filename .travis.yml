@@ -1,13 +1,7 @@
 language: node_js
 node_js: "node"
-before_install: cd ./abc
-install: npm install
-script: node a.js
 
-# jobs:
-#  include:
-#   - stage: "Build App and Deploy"
-#     script: echo a
-#   - stage: "Test"
-#     name: "Test with Kobiton"
-#     script: sh ./ehh.sh
+before_install: cd ./samples/app-test
+install: npm install
+
+script: npm run android-app-test
